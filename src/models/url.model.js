@@ -16,7 +16,7 @@ const UrlSchema = new mongoose.Schema(
     visitHistory: [
       {
         timestamp: { type: Number }, // trim is not needed for Number type
-        location: { type: String, trim: true },
+        ip: { type: String, trim: true },
       },
     ],
   },
