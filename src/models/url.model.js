@@ -1,6 +1,6 @@
-const { Mongoose, default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 
-const UrlSchema = new Mongoose(
+const UrlSchema = new mongoose.Schema(
   {
     shortId: {
       type: String,
@@ -15,7 +15,7 @@ const UrlSchema = new Mongoose(
     },
     visitHistory: [
       {
-        timestamp: { type: Number, trim: true },
+        timestamp: { type: Number }, // trim is not needed for Number type
         location: { type: String, trim: true },
       },
     ],
@@ -25,6 +25,6 @@ const UrlSchema = new Mongoose(
   }
 );
 
-const urlModel = mongoose.model("urlSchema", UrlSchema);
+const UrlModel = mongoose.model("Url", UrlSchema);
 
-module.exports = urlModel;
+module.exports = UrlModel;
