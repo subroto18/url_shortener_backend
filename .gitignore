@@ -1,0 +1,5 @@
+node_modules/       # Ignore dependencies in a Node.js project
+.env                # Ignore environment variables
+.DS_Store           # Ignore macOS system files
+.idea/              # Ignore JetBrains IDE files
+.vscode/            # Ignore VS Code settings
